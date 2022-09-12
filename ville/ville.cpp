@@ -18,6 +18,6 @@ Ville::Ville(string nom, string departement){
 }
 
 int main(){
-
+    Ville ville("Cotonou", "Littoral");
     return 0;
 }
