@@ -7,7 +7,7 @@ class Ville{
     string departement;
     public:
         Ville(string, string);
-        void getdep(string nom, string departement){
+        void getdep(){
             cout << "La ville " << nom << " est dans le département " << departement;
         }
 };
@@ -19,5 +19,6 @@ Ville::Ville(string nom, string departement){
 
 int main(){
     Ville ville("Cotonou", "Littoral");
+    ville.getdep();
     return 0;
 }
