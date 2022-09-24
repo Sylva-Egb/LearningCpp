@@ -7,11 +7,11 @@ class Ville{
     string departement;
     public:
         void setNom(string Nom){
-            Nom = nom;
+            nom = Nom;
         }
 
         void setDepartement(string dep){
-            dep= departement;
+            departement= dep;
         }
 
         string getNom(){
