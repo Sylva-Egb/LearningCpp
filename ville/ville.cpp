@@ -28,15 +28,10 @@ class Ville{
 
         };
         void afficherdep(){ 
-              cout << "La ville " << nom << " est dans le departement " << departement<< endl;
+              cout << "La ville " << getNom() << " est dans le departement " << getDepartement() << endl;
         }
 };
 
-/* Ville::Ville(char* Nom, char* Departement){
-    Nom=nom;
-    Departement=departement;
-}
- */
 int main(){
     Ville ville("Cotonou", "Littoral");
     ville.afficherdep();
