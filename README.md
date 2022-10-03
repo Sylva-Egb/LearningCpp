@@ -10,4 +10,4 @@ This folder contains the code sheet and his executable. Here I defined the prope
 
 ## ABOUT THE FOLDER "HERITAGE"
 
-Here I tried to get knowledge about inheritance of classes and polymorphism
+Here I tried to get knowledge about inheritance of classes and polymorphism still working on it

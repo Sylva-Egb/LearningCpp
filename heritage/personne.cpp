@@ -12,7 +12,7 @@ class Personne{
         string getPrenom();
         void setNom(string);
         void setPrenom(string);
-        Personne();
+        Personne(string, string);
 };
 
 string Personne:: getNom(){
@@ -31,13 +31,22 @@ void Personne::setPrenom(string p){
     prenom = p;
 }
 
+Personne::Personne(string a,string b){
+    setNom(a);
+    setPrenom(b);
+}
+
 class Client: public Personne{
     string adresse;
     public:
         string getAdresse();
         void setAdresse(string);
         void setCoord();
-        Client(string, string, string);
+        Client(string n, string p, string a):Personne(string a, string b){
+            setNom(n);
+            setPrenom(p);
+            setAdresse(a);
+        };
 };
 
 string Client::getAdresse(){
@@ -55,11 +64,6 @@ void Client:: setCoord(){
     << "ADRESSE: " << getAdresse() << "\n";
 }
 
-Client::Client(string n, string p , string a){
-    setNom(n);
-    setPrenom(p);
-    setAdresse(a);
-}
 
 class Electeur: public Personne{
     string bureau_de_vote , vote;
@@ -90,7 +94,7 @@ class Electeur: public Personne{
                 aVoter();
             }
         }
-        Electeur(string n, string p , string bureau ){
+        Electeur(string n, string p , string bureau ):Personne(){
             setNom(n);
             setPrenom(p);
             setBureauV(bureau);
