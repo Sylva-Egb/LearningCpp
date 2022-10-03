@@ -7,3 +7,7 @@ I approached the notion of getters and setters, class constructor and method tha
 ## ABOUT THE FOLDER "PERSONNE"
 
 This folder contains the code sheet and his executable. Here I defined the properties of the class, methods and constructors. The specification here is that I have declared the methods and constructor in the class and defined them outside. Over this specification the personne.cpp is the same as ville.cpp
+
+## ABOUT THE FOLDER "HERITAGE"
+
+Here I tried to get knowledge about inheritance of classes and polymorphism
