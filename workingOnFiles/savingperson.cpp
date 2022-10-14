@@ -22,14 +22,15 @@ int main(){
         cin>>profession;
         cout << "Entrez votre ville";
         cin>> ville;
-        do
-        {
+       // do
+       // {
             cout << "Avez vous vote? Tapez o pour oui et n pour non";
-            cin >> vote;
-        } while (vote != 'o' || vote != 'O' || vote != 'n' || vote != 'N');
+            cin>> vote;
+           // cout << vote;
+        //} while (vote !='o' || vote != 'O' || vote != 'n' || vote != 'N');
         cout << "VOULEZ VOUS CONTINUER? (y/n)";
         cin >> choice;
-    } while (choice='y');
+    } while (choice == 'y');
         cout << "INFORMATIONS EN COURS D'ENREGISTREMENT";
         file << "INFORMATIONS A PROPOS DE QUELQUES INDIVIDUS\n";
         file << "NOM:   " << nom << endl
@@ -39,5 +40,5 @@ int main(){
         << "VILLE:     " << ville << endl
         << "A VOTER:     " << vote << endl;
         file.close();
-        cout << "Enregistrement effectue";
+        cout << "\nEnregistrement effectue";
 }
