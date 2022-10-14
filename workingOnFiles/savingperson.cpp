@@ -19,12 +19,12 @@ int main(){
         cout << "\n Entrez votre age: ";
         cin >> age;
         cout << "Entrez votre profession";
-        getline(cin,profession);
+        cin>>profession;
         cout << "Entrez votre ville";
-        getline(cin, ville);
+        cin>> ville;
         do
         {
-            cout << "Avez vous voté? Tapez o pour oui et n pour non";
+            cout << "Avez vous vote? Tapez o pour oui et n pour non";
             cin >> vote;
         } while (vote!='o' || vote!='O' || vote!='n' || vote!='N');
         file << "INFORMATIONS A PROPOS DE QUELQUES INDIVIDUS\n";
