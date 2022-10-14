@@ -21,7 +21,19 @@ int main(){
         cout << "Entrez votre profession";
         getline(cin,profession);
         cout << "Entrez votre ville";
-        getline(cin, ville); 
+        getline(cin, ville);
+        do
+        {
+            cout << "Avez vous voté? Tapez o pour oui et n pour non";
+            cin >> vote;
+        } while (vote!='o' || vote!='O' || vote!='n' || vote!='N');
+        file << "INFORMATIONS A PROPOS DE QUELQUES INDIVIDUS\n";
+        file << "NOM:   " << nom << endl
+        << "PRENOM:     " << prenom << endl
+        << "AGE:     " << age << endl
+        << "PROFESSION:     " << profession << endl
+        << "VILLE:     " << ville << endl
+        << "A VOTER:     " << vote << endl;
     } while (choice='y');
     
 }
