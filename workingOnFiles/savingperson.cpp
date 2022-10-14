@@ -26,7 +26,11 @@ int main(){
         {
             cout << "Avez vous vote? Tapez o pour oui et n pour non";
             cin >> vote;
-        } while (vote!='o' || vote!='O' || vote!='n' || vote!='N');
+        } while (vote != 'o' || vote != 'O' || vote != 'n' || vote != 'N');
+        cout << "VOULEZ VOUS CONTINUER? (y/n)";
+        cin >> choice;
+    } while (choice='y');
+        cout << "INFORMATIONS EN COURS D'ENREGISTREMENT";
         file << "INFORMATIONS A PROPOS DE QUELQUES INDIVIDUS\n";
         file << "NOM:   " << nom << endl
         << "PRENOM:     " << prenom << endl
@@ -34,6 +38,6 @@ int main(){
         << "PROFESSION:     " << profession << endl
         << "VILLE:     " << ville << endl
         << "A VOTER:     " << vote << endl;
-    } while (choice='y');
-    
+        file.close();
+        cout << "Enregistrement effectue";
 }
