@@ -42,7 +42,7 @@ class Client: public Personne{
         string getAdresse();
         void setAdresse(string);
         void setCoord();
-        Client(string n, string p, string a):Personne(string a, string b){
+        Client(string n, string p, string a):Personne(n,p),adresse(a){
             setNom(n);
             setPrenom(p);
             setAdresse(a);
@@ -94,11 +94,10 @@ class Electeur: public Personne{
                 aVoter();
             }
         }
-        Electeur(string n, string p , string bureau ):Personne(){
+        Electeur(string n, string p , string b /* , string v */):Personne(n,p), bureau_de_vote(b)/* , vote(v) */{
             setNom(n);
             setPrenom(p);
-            setBureauV(bureau);
-            aVoter();
+            setBureauV(b);
         }
         void displaying(){
             cout << "INFORMATIONS SUR LE CITOYEN\n"
