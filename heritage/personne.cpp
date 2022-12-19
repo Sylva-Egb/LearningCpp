@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+
 using namespace std;
 
 class Personne{
@@ -77,24 +78,24 @@ class Electeur: public Personne{
         void aVoter(){
             string x;
             getline(cin,x);
-            cout <<"Le citoyen "<< nom << " a-t-il voter? o/n";
-            if ( x == "o" || x == "n" || x == "O" or x == "N")
+            cout <<"Le citoyen "<< nom << " a-t-il voter? o(Oui)/n(Non):\t";
+            if (x == "o" or x=="O")
             {
-                if (x == "o" or x=="O")
-                {
-                    vote = "Oui";
-                }
-                else
-                {
-                    vote = "Non";
-                }
+                vote = "Oui";
+                cout <<endl;
+            }
+            else if (x == "n" or x=="N")
+            {
+                vote = "Non";
+                cout <<endl;
             }
             else
             {
                 aVoter();
+                cout <<endl;
             }
         }
-        Electeur(string n, string p , string b /* , string v */):Personne(n,p), bureau_de_vote(b)/* , vote(v) */{
+        Electeur(string n, string p , string b):Personne(n,p), bureau_de_vote(b){
             setNom(n);
             setPrenom(p);
             setBureauV(b);
@@ -110,6 +111,7 @@ class Electeur: public Personne{
 int main(){
     Client client("SOLEIL", "Levant", "Cotonou" );
     Electeur electeur("EGBEWOLE", "Sylva","Cotonou");
+    electeur.aVoter();
     electeur.displaying();
     client.setCoord();
     return 0;
